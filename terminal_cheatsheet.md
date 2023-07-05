@@ -23,7 +23,7 @@
 - ls -l
 	- lists files and folders along with permissions, owner, and date last modified
 	
-- ls -al
+- ls -a
 	- Shows hidden files as well as other files and folders
 
 - cd Documents
@@ -68,7 +68,7 @@
 	- Forcefully deletes folders, even protected ones without asking
 
 - git status
-    - See if code is in staging area to be committed
+    - Shows what changes are stages, which aren't, and which files aren't being tracked.
 
 - git add .
     - add all changes to staging area to be committed
@@ -88,7 +88,7 @@
     - show list of branches that exist locally
 
 - git init
-    - Creates a .git folder
+    - Creates a .git folder in cd
 &nbsp;
 
 &nbsp;
@@ -118,20 +118,21 @@
 &nbsp;
 ## Join Repo as a Collaborator
 1. Click the green code icon, 
-2. copy the HTTP URL link, 
+2. copy the SSH link, 
 3. ``` 
-    git clone <insert URL you copied> 
+    git clone <insert SSH> 
 4. Insert your username (LadyCaro)
 5. Insert password 
-    - need to create a token by going to settings, dev eloper settings, tokens, new token, click repo, then copy into terminal
+    - Either your normal password
+	- Or, need to create a token by going to settings, dev eloper settings, tokens, new token, click repo, then copy into terminal
 6. Open in VSCode, then commit, sync and push any changes for others to see
 
 &nbsp;
 
 &nbsp;
 
-## Adding code from collaborator to local machine
-1. Open the code in VSCode
+## Adding new changes from collaborator to local machine
+1. Open the code in VSCode (if project is already cloned on local machine, follow steps above if not)
 2. ```
     git pull
     ```
@@ -146,29 +147,50 @@
 ## Git Workflow
 
 1. Modify files
-2. git status
-	- Check which files are not commited
+2. ```
+	git status
+	```
+	- Check which files are not committed
 3. Add files to staging area
-	- git add [file]
-	- OR git add . (means all)
-4. git status
+	```
+	git add [file]
+	```
+	- OR 
+	```
+	git add .
+	```
+4. ```
+	git status 
+	```
 	- Check what is in the staging area
 5. Commit the files in staging area and add commit message
-	- git commit -m "Add desciptive message about file changes"
-6. git status
+	```
+	git commit -m "Add desciptive message about file changes"
+	```
+6. ```
+	git status
+	```
 	- Should say "nothing to commit"
-7. Git log
+7. ```
+	git log
+	```
 	- Shows commit history
 
 &nbsp;
 
 &nbsp;
 ### When ready, push commits to GitHub
-1. git push 
-- OR 
-1. git push origin main (if working with other branches)
-	- Push work to GitHub repository
-2. Git status
+1. ```
+	git push
+	``` 
+	- OR 
+1. ```
+	git push origin main 
+	```
+	- if working with other branches
+2. ```
+	git status
+	```
 	- Should say “Your branch is up to date with ‘origin/main’. nothing to commit, working tree clean”
 3. Reload repository on GitHub to show the changes. 
 
